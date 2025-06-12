@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -99,5 +100,22 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Georgia', 'Times New Roman', serif;
+  }
+
+  /* Custom romantic styles */
+  .shadow-3xl {
+    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* Romantic gradient backgrounds */
+@layer utilities {
+  .bg-romantic-gradient {
+    background: linear-gradient(135deg, #ff69b4, #ff1493, #6f42c1);
+  }
+  
+  .bg-love-gradient {
+    background: linear-gradient(45deg, #ff69b4, #ffd700, #ff1493);
   }
 }

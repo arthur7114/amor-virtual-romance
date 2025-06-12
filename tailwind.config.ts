@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -84,11 +85,65 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fadeIn': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'slideIn': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateX(-30px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateX(0)'
+					}
+				},
+				'floatUp': {
+					'0%': {
+						opacity: '1',
+						transform: 'translateY(0) scale(0.5)'
+					},
+					'50%': {
+						opacity: '1',
+						transform: 'translateY(-100px) scale(1)'
+					},
+					'100%': {
+						opacity: '0',
+						transform: 'translateY(-200px) scale(0.5)'
+					}
+				},
+				'floatAcross': {
+					'0%': {
+						transform: 'translateX(-100px) translateY(0px)',
+						opacity: '0'
+					},
+					'10%': {
+						opacity: '1'
+					},
+					'90%': {
+						opacity: '1'
+					},
+					'100%': {
+						transform: 'translateX(calc(100vw + 100px)) translateY(-50px)',
+						opacity: '0'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fadeIn': 'fadeIn 1s ease-out',
+				'slideIn': 'slideIn 1s ease-out',
+				'floatUp': 'floatUp 3s ease-out forwards',
+				'floatAcross': 'floatAcross 15s linear infinite'
 			}
 		}
 	},
