@@ -24,9 +24,9 @@ const LoveClickCounter = () => {
     if (count <= 10) {
       return loveMessages[count - 1];
     } else if (count <= 20) {
-      return `${count} beijinhos, vou cobrar ein`;
+      return `${count} cliques, vou cobrar em beijos, hehe😌`;
     } else if (count <= 50) {
-      return `${count} beijinhos!!! Já vamo ficar um tempinho nos beijos ein😏`;
+      return `${count} cliques!!! Já vamo ficar um tempinho nos beijos ein😏`;
     } else if (count <= 100) {
       return `${count} cliques! O que acontece quando passar de 100?`;
     } else {
