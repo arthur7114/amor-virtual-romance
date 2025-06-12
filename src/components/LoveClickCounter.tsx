@@ -8,29 +8,29 @@ const LoveClickCounter = () => {
   const [message, setMessage] = useState("");
 
   const loveMessages = [
-    "Você me amou 1 vez hoje! 💕",
-    "2 demonstrações de amor! Meu coração está derretendo! 💖",
-    "3 vezes! Você está sendo muito carinhoso(a) hoje! 🥰",
-    "4 vezes! Cada clique é um beijinho no meu coração! 💋",
-    "5 vezes! Você está me mimando de amor! 😍",
-    "6 vezes! Estou nas nuvens de tanta felicidade! ☁️💕",
-    "7 vezes! Número da sorte! Somos abençoados! 🍀",
-    "8 vezes! Infinito como nosso amor! ∞💖",
-    "9 vezes! Quase chegando aos dois dígitos de amor! 🔥",
-    "10 vezes! UAAAAU! Você me ama demais! Estou explodindo de felicidade! 🎆💕"
+    "Acho que dá mais ein, momo 👀",
+    "Vai momo!!",
+    "Tá ficando interessante, mais amor🫡",
+    "Eita como clica hehe",
+    "Hmmmm, tá fraco mo",
+    "Quero mais e mais e mais",
+    "Ainda não, dá mais mo",
+    "Taca o dedo, moça 🙂",
+    "Cada clique é um beijinho que você me deve",
+    "10 vezes! Aêee momo, já vai dar 10 beijinhos, mas mereço mais ein 🥰"
   ];
 
   const getRandomMessage = (count: number) => {
     if (count <= 10) {
       return loveMessages[count - 1];
     } else if (count <= 20) {
-      return `${count} demonstrações de amor! Você é incrível! 💝`;
+      return `${count} beijinhos, vou cobrar ein`;
     } else if (count <= 50) {
-      return `${count} vezes! Nosso amor não tem limites! 🌟💕`;
+      return `${count} beijinhos!!! Já vamo ficar um tempinho nos beijos ein😏`;
     } else if (count <= 100) {
-      return `${count} cliques de amor! Você está batendo recordes! 🏆💖`;
+      return `${count} cliques! O que acontece quando passar de 100?`;
     } else {
-      return `${count} vezes! Isso é amor verdadeiro! Você é perfeito(a)! 👑💕`;
+      return `Te amo ${count}x mais, amor!!! 🥰`;
     }
   };
 
