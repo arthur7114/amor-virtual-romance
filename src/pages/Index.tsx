@@ -1,6 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { Heart } from 'lucide-react';
+import InteractiveTimeline from '../components/InteractiveTimeline';
+import LoveQuiz from '../components/LoveQuiz';
+import LoveClickCounter from '../components/LoveClickCounter';
 
 const Index = () => {
   const [revealedQualities, setRevealedQualities] = useState<Set<number>>(new Set());
@@ -99,6 +102,15 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Love Click Counter */}
+      <LoveClickCounter />
+
+      {/* Interactive Timeline */}
+      <InteractiveTimeline />
+
+      {/* Love Quiz */}
+      <LoveQuiz />
 
       {/* 12 Months Gallery */}
       <section className="py-16 px-4 bg-gradient-to-r from-pink-100 to-purple-100">
