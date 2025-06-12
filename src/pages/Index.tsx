@@ -1,10 +1,16 @@
 
 import React, { useState, useEffect } from 'react';
 import { Heart } from 'lucide-react';
+import { useParallax } from '../hooks/useParallax';
+import SurpriseModal from '../components/SurpriseModal';
 
 const Index = () => {
   const [revealedQualities, setRevealedQualities] = useState<Set<number>>(new Set());
   const [floatingHearts, setFloatingHearts] = useState<Array<{id: number, x: number, y: number}>>([]);
+  const [interactionCount, setInteractionCount] = useState(0);
+  const [showSurpriseModal, setShowSurpriseModal] = useState(false);
+  
+  const scrollY = useParallax();
 
   const qualities = [
     { title: "Seu Sorriso", message: "💫 Seu sorriso ilumina meu dia e faz tudo parecer possível. É a primeira coisa que me faz sorrir toda manhã!", gradient: "from-pink-400 to-rose-500" },
@@ -19,6 +25,15 @@ const Index = () => {
     "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
     "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
   ];
+
+  const trackInteraction = () => {
+    const newCount = interactionCount + 1;
+    setInteractionCount(newCount);
+    
+    if (newCount >= 7 && !showSurpriseModal) {
+      setShowSurpriseModal(true);
+    }
+  };
 
   const createFloatingHeart = (x?: number, y?: number) => {
     const heart = {
@@ -36,11 +51,17 @@ const Index = () => {
   const revealQuality = (index: number, event: React.MouseEvent) => {
     setRevealedQualities(prev => new Set([...prev, index]));
     createFloatingHeart(event.clientX, event.clientY);
+    trackInteraction();
   };
 
   const handleMainPhotoClick = () => {
     alert("🥰 Esta é minha foto favorita nossa! Cada vez que olho, meu coração se enche de amor por você! 💕");
     createFloatingHeart();
+    trackInteraction();
+  };
+
+  const handleMonthHover = () => {
+    trackInteraction();
   };
 
   useEffect(() => {
@@ -53,26 +74,38 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 to-purple-50 relative overflow-x-hidden">
-      {/* Floating Cats Animation */}
+      {/* Floating Cats Animation with Parallax */}
       <div className="fixed inset-0 pointer-events-none z-10">
-        <div className="absolute animate-[floatAcross_15s_linear_infinite] text-2xl">🐱</div>
-        <div className="absolute animate-[floatAcross_20s_linear_infinite] text-2xl top-1/4" style={{animationDelay: '5s'}}>😺</div>
-        <div className="absolute animate-[floatAcross_18s_linear_infinite] text-2xl top-2/3" style={{animationDelay: '10s'}}>😻</div>
+        <div 
+          className="absolute animate-[floatAcross_15s_linear_infinite] text-2xl"
+          style={{ transform: `translateY(${scrollY * 0.3}px)` }}
+        >🐱</div>
+        <div 
+          className="absolute animate-[floatAcross_20s_linear_infinite] text-2xl top-1/4" 
+          style={{animationDelay: '5s', transform: `translateY(${scrollY * 0.2}px)`}}
+        >😺</div>
+        <div 
+          className="absolute animate-[floatAcross_18s_linear_infinite] text-2xl top-2/3" 
+          style={{animationDelay: '10s', transform: `translateY(${scrollY * 0.4}px)`}}
+        >😻</div>
       </div>
 
-      {/* Floating Hearts */}
+      {/* Floating Hearts with Heartbeat Animation */}
       {floatingHearts.map(heart => (
         <div
           key={heart.id}
           className="fixed z-20 pointer-events-none animate-[floatUp_3s_ease-out_forwards]"
           style={{ left: heart.x, top: heart.y }}
         >
-          <Heart className="text-pink-500 w-6 h-6 fill-current" />
+          <Heart className="text-pink-500 w-6 h-6 fill-current animate-heartbeat" />
         </div>
       ))}
 
-      {/* Header */}
-      <header className="text-center py-16 bg-gradient-to-r from-pink-500 via-rose-500 to-purple-600 text-white animate-[fadeIn_1s_ease-out]">
+      {/* Header with Parallax Background */}
+      <header 
+        className="text-center py-16 bg-gradient-to-r from-pink-500 via-rose-500 to-purple-600 text-white animate-[fadeIn_1s_ease-out] relative"
+        style={{ transform: `translateY(${scrollY * 0.1}px)` }}
+      >
         <h1 className="text-5xl md:text-7xl font-serif font-bold mb-4 animate-[slideIn_1s_ease-out]">
           Para Meu Amor
         </h1>
@@ -100,8 +133,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* 12 Months Gallery */}
-      <section className="py-16 px-4 bg-gradient-to-r from-pink-100 to-purple-100">
+      {/* 12 Months Gallery with Parallax */}
+      <section 
+        className="py-16 px-4 bg-gradient-to-r from-pink-100 to-purple-100"
+        style={{ transform: `translateY(${scrollY * 0.05}px)` }}
+      >
         <h2 className="text-3xl md:text-4xl font-serif text-purple-800 text-center mb-12">
           Nossos 12 Meses de Amor
         </h2>
@@ -110,6 +146,8 @@ const Index = () => {
             <div
               key={month}
               className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 text-center"
+              onMouseEnter={handleMonthHover}
+              style={{ transform: `translateY(${scrollY * 0.02 * (index % 3)}px)` }}
             >
               <h3 className="font-serif text-purple-700 text-lg mb-4">{month}</h3>
               <div className="relative">
@@ -150,8 +188,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Final Message */}
-      <section className="py-16 px-4 bg-gradient-to-r from-pink-600 via-rose-600 to-purple-700 text-white text-center">
+      {/* Final Message with Parallax */}
+      <section 
+        className="py-16 px-4 bg-gradient-to-r from-pink-600 via-rose-600 to-purple-700 text-white text-center"
+        style={{ transform: `translateY(${scrollY * 0.03}px)` }}
+      >
         <div className="max-w-4xl mx-auto">
           <p className="text-lg md:text-xl font-serif leading-relaxed mb-8">
             Este site é só uma pequena demonstração do meu amor por você. Cada dia ao seu lado é um presente, 
@@ -163,6 +204,12 @@ const Index = () => {
           </p>
         </div>
       </section>
+
+      {/* Surprise Modal */}
+      <SurpriseModal 
+        isOpen={showSurpriseModal} 
+        onClose={() => setShowSurpriseModal(false)} 
+      />
     </div>
   );
 };
