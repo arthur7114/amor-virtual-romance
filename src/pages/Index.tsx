@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+eimport React, { useState, useEffect } from 'react';
 import { Heart } from 'lucide-react';
 import InteractiveTimeline from '../components/InteractiveTimeline';
 import LoveQuiz from '../components/LoveQuiz';
@@ -173,9 +173,7 @@ const Index = () => {
       <section className="py-16 px-4 bg-gradient-to-r from-pink-600 via-rose-600 to-purple-700 text-white text-center">
         <div className="max-w-4xl mx-auto">
           <p className="text-lg md:text-xl font-serif leading-relaxed mb-8">
-            Este site é só uma pequena demonstração do meu amor por você. Cada dia ao seu lado é um presente, 
-            e mal posso esperar para criar ainda mais memórias juntos. Você é minha pessoa favorita, 
-            minha melhor amiga, meu grande amor. ❤️
+            Esperao que eu tenha conseguido te arrancar sorrisos, passei a semana fazendo isso. Dei o sangue mesmo. Você vale todo meu esforço e te ver feliz é o que me faz ter força sempre. Te amo muito, princesa <3!
           </p>
           <p className="text-2xl md:text-3xl font-bold font-serif">
             Feliz Dia dos Namorados, meu amor! 💕
