@@ -18,9 +18,19 @@ const Index = () => {
     { title: "Nossos Momentos", message: "💝 Cada momento ao seu lado é especial. Você transforma os dias comuns em memórias inesquecíveis!", gradient: "from-rose-500 to-purple-500" }
   ];
 
-  const months = [
-    "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
-    "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+  const monthsWithPhotos = [
+    { name: "Janeiro", photo: "/lovable-uploads/b7c7dd7e-698a-4486-86ca-857352367177.png" },
+    { name: "Fevereiro", photo: "/lovable-uploads/6ee75455-375b-46fb-979f-00675deb576f.png" },
+    { name: "Março", photo: "/lovable-uploads/941783e3-1aa0-46b6-852c-32cc80b6058f.png" },
+    { name: "Abril", photo: "/lovable-uploads/d59400cc-49fa-4f38-bce7-437331e5f2d9.png" },
+    { name: "Maio", photo: "/lovable-uploads/13354631-c479-477c-91c9-a48e3abe0c84.png" },
+    { name: "Junho", photo: "/lovable-uploads/e7682d4f-0f50-45bc-ae0b-051ccef43419.png" },
+    { name: "Julho", photo: "/lovable-uploads/d212cb89-61c4-4ae6-8596-cc9a3b0bbbda.png" },
+    { name: "Agosto", photo: "/lovable-uploads/b451f389-a9a2-4337-a018-a9950669da5c.png" },
+    { name: "Setembro", photo: "/lovable-uploads/702010d9-ef29-4672-92e3-87558b4c41fc.png" },
+    { name: "Outubro", photo: "/lovable-uploads/f2b14a75-1e58-486b-8890-10e066d67677.png" },
+    { name: "Novembro", photo: "/lovable-uploads/b7c7dd7e-698a-4486-86ca-857352367177.png" },
+    { name: "Dezembro", photo: "/lovable-uploads/6ee75455-375b-46fb-979f-00675deb576f.png" }
   ];
 
   const createFloatingHeart = (x?: number, y?: number) => {
@@ -112,22 +122,22 @@ const Index = () => {
       {/* Love Quiz */}
       <LoveQuiz />
 
-      {/* 12 Months Gallery */}
+      {/* 12 Months Gallery with Real Photos */}
       <section className="py-16 px-4 bg-gradient-to-r from-pink-100 to-purple-100">
         <h2 className="text-3xl md:text-4xl font-serif text-purple-800 text-center mb-12">
           Nossos 12 Meses de Amor
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          {months.map((month, index) => (
+          {monthsWithPhotos.map((month, index) => (
             <div
-              key={month}
+              key={month.name}
               className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 text-center"
             >
-              <h3 className="font-serif text-purple-700 text-lg mb-4">{month}</h3>
+              <h3 className="font-serif text-purple-700 text-lg mb-4">{month.name}</h3>
               <div className="relative">
                 <img
-                  src={`https://images.unsplash.com/photo-${1472396961693 + index}?w=120&h=120&fit=crop`}
-                  alt={`Memória de ${month}`}
+                  src={month.photo}
+                  alt={`Memória de ${month.name}`}
                   className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-pink-300 hover:border-pink-500 transition-colors duration-300"
                 />
               </div>
