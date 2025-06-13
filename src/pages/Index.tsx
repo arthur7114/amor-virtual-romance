@@ -95,7 +95,7 @@ const Index = () => {
             onClick={handleMainPhotoClick}
           >
             <img
-              src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=300&h=400&fit=crop"
+              src="/lovable-uploads/9557dfac-5426-498a-a0f2-3e92f48e254d.png"
               alt="Nossa foto favorita"
               className="w-72 h-96 object-cover rounded-sm"
             />
