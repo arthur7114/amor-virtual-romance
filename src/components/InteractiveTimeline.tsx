@@ -19,7 +19,7 @@ const InteractiveTimeline = () => {
       id: 1,
       date: "Primeiro Encontro",
       title: "O Dia que Tudo Começou",
-      description: "Nossos olhares se cruzaram e eu soube que você seria especial na minha vida. Cada segundo daquele dia está guardado no meu coração! 💕",
+      description: "Eu tava nervoso feito um condenado ksksks. Mas foi perfeito pra mim, ali eu já tinha muita fé que você seria minha garota🥰",
       emoji: "✨",
       color: "from-pink-400 to-rose-500"
     },
@@ -27,23 +27,23 @@ const InteractiveTimeline = () => {
       id: 2,
       date: "Primeiro Beijo",
       title: "Nosso Primeiro Beijo",
-      description: "O mundo parou naquele momento. Seu beijo foi a confirmação de que eu havia encontrado minha pessoa especial! 💋",
+      description: "Quase fez tu surtar comigo, mas veio. Foi do meu jeitinho todo indireto, mas foi o que tornou especial e inesquecível pra ambos. 💖",
       emoji: "💋",
       color: "from-rose-400 to-pink-500"
     },
     {
       id: 3,
       date: "Primeiro 'Eu Te Amo'",
-      title: "As Palavras Mais Doces",
-      description: "Quando você disse 'eu te amo' pela primeira vez, meu coração quase saiu pela boca! Foi o momento mais feliz da minha vida! 💖",
+      title: "Foi bem inesperado",
+      description: "Esse momento não foi o mais romântico do mundo, mas tenho certeza que fez a gente chegar onde estamos. Pra mim isso importa muito!",
       emoji: "💖",
       color: "from-pink-500 to-purple-500"
     },
     {
       id: 4,
       date: "Nossa Primeira Viagem",
-      title: "Aventura Juntos",
-      description: "Descobrir o mundo ao seu lado é ainda mais mágico! Cada lugar que visitamos fica especial porque você estava lá! ✈️",
+      title: "Um sonho realizado pra nós dois <3",
+      description: "Ir pra Guaramiranga a sós guardou uma marca de melhor final de semana da minha vida até agora. Vamos de novooo!",
       emoji: "✈️",
       color: "from-purple-400 to-pink-500"
     },
@@ -51,7 +51,7 @@ const InteractiveTimeline = () => {
       id: 5,
       date: "Hoje",
       title: "Nosso Amor Hoje",
-      description: "E aqui estamos, mais apaixonados que nunca! Cada dia ao seu lado é uma nova página da nossa história de amor! 🌟",
+      description: "Hoje você tá aqui, neném. E eu tô do seu lado pra sempre!",
       emoji: "🌟",
       color: "from-pink-400 to-purple-400"
     }
