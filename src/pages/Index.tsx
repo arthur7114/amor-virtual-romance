@@ -1,7 +1,6 @@
-eimport React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Heart } from 'lucide-react';
 import InteractiveTimeline from '../components/InteractiveTimeline';
-import LoveQuiz from '../components/LoveQuiz';
 import LoveClickCounter from '../components/LoveClickCounter';
 
 const Index = () => {
@@ -18,16 +17,19 @@ const Index = () => {
   ];
 
   const monthsWithPhotos = [
-    { name: "Janeiro", photo: "/lovable-uploads/b7c7dd7e-698a-4486-86ca-857352367177.png" },
-    { name: "Fevereiro", photo: "/lovable-uploads/6ee75455-375b-46fb-979f-00675deb576f.png" },
-    { name: "Março", photo: "/lovable-uploads/941783e3-1aa0-46b6-852c-32cc80b6058f.png" },
-    { name: "Abril", photo: "/lovable-uploads/d59400cc-49fa-4f38-bce7-437331e5f2d9.png" },
-    { name: "Maio", photo: "/lovable-uploads/13354631-c479-477c-91c9-a48e3abe0c84.png" },
-    { name: "Junho", photo: "/lovable-uploads/e7682d4f-0f50-45bc-ae0b-051ccef43419.png" },
-    { name: "Julho", photo: "/lovable-uploads/d212cb89-61c4-4ae6-8596-cc9a3b0bbbda.png" },
-    { name: "Agosto", photo: "/lovable-uploads/b451f389-a9a2-4337-a018-a9950669da5c.png" },
-    { name: "Setembro", photo: "/lovable-uploads/702010d9-ef29-4672-92e3-87558b4c41fc.png" },
-    { name: "Outubro", photo: "/lovable-uploads/f2b14a75-1e58-486b-8890-10e066d67677.png" }
+    { name: "Junho 2024", photo: "/lovable-uploads/e7682d4f-0f50-45bc-ae0b-051ccef43419.png" },
+    { name: "Julho 2024", photo: "/lovable-uploads/d212cb89-61c4-4ae6-8596-cc9a3b0bbbda.png" },
+    { name: "Agosto 2024", photo: "/lovable-uploads/b451f389-a9a2-4337-a018-a9950669da5c.png" },
+    { name: "Setembro 2024", photo: "/lovable-uploads/702010d9-ef29-4672-92e3-87558b4c41fc.png" },
+    { name: "Outubro 2024", photo: "/lovable-uploads/f2b14a75-1e58-486b-8890-10e066d67677.png" },
+    { name: "Novembro 2024", photo: "/lovable-uploads/85d19a27-bb83-4f8b-960f-2579dc7d9d7c.png" },
+    { name: "Dezembro 2024", photo: "/lovable-uploads/6ee75455-375b-46fb-979f-00675deb576f.png" },
+    { name: "Janeiro 2025", photo: "/lovable-uploads/b7c7dd7e-698a-4486-86ca-857352367177.png" },
+    { name: "Fevereiro 2025", photo: "/lovable-uploads/941783e3-1aa0-46b6-852c-32cc80b6058f.png" },
+    { name: "Março 2025", photo: "/lovable-uploads/d59400cc-49fa-4f38-bce7-437331e5f2d9.png" },
+    { name: "Abril 2025", photo: "/lovable-uploads/13354631-c479-477c-91c9-a48e3abe0c84.png" },
+    { name: "Maio 2025", photo: "/lovable-uploads/b22b531c-090d-4335-93c1-f968718d981c.png" },
+    { name: "Junho 2025", photo: "/lovable-uploads/3bd05cce-4e5c-4f4e-9e00-1b1cac3189b9.png" }
   ];
 
   const createFloatingHeart = (x?: number, y?: number) => {
@@ -116,13 +118,10 @@ const Index = () => {
       {/* Interactive Timeline */}
       <InteractiveTimeline />
 
-      {/* Love Quiz */}
-      <LoveQuiz />
-
-      {/* 10 Months Gallery with Real Photos */}
+      {/* 13 Months Gallery with Real Photos */}
       <section className="py-16 px-4 bg-gradient-to-r from-pink-100 to-purple-100">
         <h2 className="text-3xl md:text-4xl font-serif text-purple-800 text-center mb-12">
-          Nossos 10 Meses de Amor
+          Nossos 13 Meses de Amor
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {monthsWithPhotos.map((month, index) => (
