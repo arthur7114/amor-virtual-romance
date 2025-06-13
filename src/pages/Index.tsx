@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Heart } from 'lucide-react';
 import InteractiveTimeline from '../components/InteractiveTimeline';
@@ -28,9 +27,7 @@ const Index = () => {
     { name: "Julho", photo: "/lovable-uploads/d212cb89-61c4-4ae6-8596-cc9a3b0bbbda.png" },
     { name: "Agosto", photo: "/lovable-uploads/b451f389-a9a2-4337-a018-a9950669da5c.png" },
     { name: "Setembro", photo: "/lovable-uploads/702010d9-ef29-4672-92e3-87558b4c41fc.png" },
-    { name: "Outubro", photo: "/lovable-uploads/f2b14a75-1e58-486b-8890-10e066d67677.png" },
-    { name: "Novembro", photo: "/lovable-uploads/b7c7dd7e-698a-4486-86ca-857352367177.png" },
-    { name: "Dezembro", photo: "/lovable-uploads/6ee75455-375b-46fb-979f-00675deb576f.png" }
+    { name: "Outubro", photo: "/lovable-uploads/f2b14a75-1e58-486b-8890-10e066d67677.png" }
   ];
 
   const createFloatingHeart = (x?: number, y?: number) => {
@@ -122,10 +119,10 @@ const Index = () => {
       {/* Love Quiz */}
       <LoveQuiz />
 
-      {/* 12 Months Gallery with Real Photos */}
+      {/* 10 Months Gallery with Real Photos */}
       <section className="py-16 px-4 bg-gradient-to-r from-pink-100 to-purple-100">
         <h2 className="text-3xl md:text-4xl font-serif text-purple-800 text-center mb-12">
-          Nossos 12 Meses de Amor
+          Nossos 10 Meses de Amor
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {monthsWithPhotos.map((month, index) => (
