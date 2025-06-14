@@ -9,12 +9,12 @@ const Index = () => {
   const [floatingHearts, setFloatingHearts] = useState<Array<{id: number, x: number, y: number}>>([]);
 
   const qualities = [
-    { title: "Seu Sorriso", message: "💫 Seu sorriso ilumina meu dia e faz tudo parecer possível. É a primeira coisa que me faz sorrir toda manhã!", gradient: "from-pink-400 to-rose-500" },
-    { title: "Sua Gentileza", message: "🌟 Sua gentileza com todos ao seu redor me mostra que escolhi a pessoa certa. Você tem um coração de ouro!", gradient: "from-rose-400 to-pink-500" },
-    { title: "Sua Inteligência", message: "🧠 Conversar com você é sempre uma aventura. Sua inteligência e curiosidade me inspiram a ser melhor!", gradient: "from-pink-500 to-purple-500" },
-    { title: "Seu Carinho", message: "🤗 Seus abraços são meu lugar seguro. Seu carinho me faz sentir amado de um jeito único!", gradient: "from-purple-400 to-pink-500" },
-    { title: "Sua Beleza", message: "✨ Você é linda por dentro e por fora. Sua beleza vai muito além do que os olhos podem ver!", gradient: "from-pink-400 to-purple-400" },
-    { title: "Nossos Momentos", message: "💝 Cada momento ao seu lado é especial. Você transforma os dias comuns em memórias inesquecíveis!", gradient: "from-rose-500 to-purple-500" }
+    { title: "Sua risada", message: "Amo de paixão te fazer rir. Adoro quando eu faço qualquer palhaçado e você acha graça, fico muito feliz!", gradient: "from-pink-400 to-rose-500" },
+    { title: "Seu carisma", message: "Você é muito magnética! Desde o primeiro momento fiquei mega apaixonado nisso e é como se me completasse.", gradient: "from-rose-400 to-pink-500" },
+    { title: "Sua Inteligência", message: "Eu te acho extremamente inteligente e isso me pega muito. Você é muito rápida no pensamento e entende algumas coisas que nem eu pego as vezes. Nossos filhos serão gênios hehe", gradient: "from-pink-500 to-purple-500" },
+    { title: "Seu Carinho", message: "Me sinto muito amado perto de ti e não vivo sem seus abraços, beijos e carinhos 🥰", gradient: "from-purple-400 to-pink-500" },
+    { title: "Sua Beleza", message: "Você é minha rainha e sabe disso! Eu amo te apreciar e ficar observando o quanto você é linda.", gradient: "from-pink-400 to-purple-400" },
+    { title: "Nossos Momentos", message: "Cada momento ao seu lado é especial. Tem momentos que eram pra ser só rotineiros, acabam se transformando em coisas inesquecíveis.", gradient: "from-rose-500 to-purple-500" }
   ];
 
   const monthsWithPhotos = [
@@ -97,7 +97,7 @@ const Index = () => {
       {/* Main Photo Section */}
       <section className="py-16 px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-serif text-purple-800 mb-8 animate-[fadeIn_1s_ease-out]">
-          Minha Foto Preferida de Nós
+          Minha Foto Preferida Nossa
         </h2>
         <div className="flex justify-center">
           <div 
@@ -173,7 +173,7 @@ const Index = () => {
       <section className="py-16 px-4 bg-gradient-to-r from-pink-600 via-rose-600 to-purple-700 text-white text-center">
         <div className="max-w-4xl mx-auto">
           <p className="text-lg md:text-xl font-serif leading-relaxed mb-8">
-            Esperao que eu tenha conseguido te arrancar sorrisos, passei a semana fazendo isso. Dei o sangue mesmo. Você vale todo meu esforço e te ver feliz é o que me faz ter força sempre. Te amo muito, princesa &lt;3!
+            Espero que eu tenha conseguido te arrancar sorrisos, passei a semana fazendo isso. Dei o sangue mesmo. Você vale todo meu esforço e te ver feliz é o que me faz ter força sempre. Te amo muito, princesa 💖!
           </p>
           <p className="text-2xl md:text-3xl font-bold font-serif">
             Feliz Dia dos Namorados, meu amor! 💕
