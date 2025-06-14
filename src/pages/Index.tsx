@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Heart } from 'lucide-react';
 import InteractiveTimeline from '../components/InteractiveTimeline';
